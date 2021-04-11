@@ -13,6 +13,7 @@ import { loadUser } from './actions/auth';
 import setAuthToken from './utils/setAuthToken';
 
 if (localStorage.token) {
+  console.log('test');
   setAuthToken(localStorage.token);
 }
 
@@ -20,7 +21,7 @@ const App = () => {
   useEffect(() => {
     //useEffect hook
     // runs at every mount of a component
-    store.dispatch(loadUser);
+    store.dispatch(loadUser());
   }, []);
 
   return (
