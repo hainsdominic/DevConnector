@@ -53,12 +53,12 @@ Dashboard.propTypes = {
   getCurrentProfile: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
   profile: PropTypes.object.isRequired,
+  deleteAccount: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => ({
   auth: state.auth,
   profile: state.profile,
-  deleteAccount: PropTypes.func.isRequired,
 });
 
 export default connect(mapStateToProps, { getCurrentProfile, deleteAccount })(
